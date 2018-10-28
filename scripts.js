@@ -1,26 +1,31 @@
-document.addEventListener('DOMContentLoaded', function() {
 
     let button = document.createElement('button');
     let btnText = document.createTextNode('Add Square');
-    let myDiv = document.createElement('div');
-    button.appendChild(btnText);
-    document.body.appendChild(button);
-    document.body.appendChild(myDiv);
+    button.style.position = 'fixed';
+    button.append(btnText);
+    document.body.append(button);
 
 
     button.addEventListener('click', function() {
-        let div = document.createElement('div');
-        myDiv.appendChild(div);
-        div.style.backgroundColor = 'black';
-        div.style.width = '100px';
-        div.style.height = '100px';
-        div.style.cssFloat = 'left';    
-        div.className = 'allDivs';
-        div.setAttribute('id', 'id');
+        
+        let myDiv = document.createElement('div');
+        document.body.append(myDiv);
+        myDiv.style.cssFloat = 'left';    
+        myDiv.style.backgroundColor = 'black';
+        myDiv.style.width = '100px';
+        myDiv.style.height = '100px';
+        myDiv.className = 'allDivs';
+        myDiv.setAttribute('id', 'id');
 
-    
+    myDiv.addEventListener('mouseover', function() {
+        myDiv.style.backgroundColor = 'pink';
+     });
 
-    })
+     myDiv.addEventListener('mousedown', function() {
+         myDiv.style.backgroundColor = 'green';
+     });
 
-});
+    });
+
+
 
