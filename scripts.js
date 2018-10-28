@@ -21,7 +21,7 @@
         myDiv.style.backgroundColor = 'pink';
      });
 
-     myDiv.addEventListener('mousedown', function() {
+     myDiv.addEventListener('mouseout', function() {
          myDiv.style.backgroundColor = 'green';
      });
 
